@@ -16,6 +16,9 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   pull-request-ci:
+    # Skip this job if the event is not a merge_group event
+    if: ${{ github.event_name == 'pull_request' }}
+
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
