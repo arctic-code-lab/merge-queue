@@ -2,7 +2,7 @@
 
 shopt -s nullglob
 
-echo "MQ event on branch: $(git branch --show-current)"
+echo "MQ event on branch: $1"
 
 files=( *.txt )
 

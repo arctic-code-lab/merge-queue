@@ -1,3 +1,5 @@
 #!/bin/bash
 
-echo "PR event on branch: $(git branch --show-current)"
+git branch --show-current
+
+echo "PR event on branch: $1"
