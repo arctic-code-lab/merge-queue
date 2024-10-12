@@ -4,6 +4,11 @@ shopt -s nullglob
 
 echo "MQ event on branch: $1"
 
+for i in {1..5}; do
+    echo "Sleeping $i"
+    sleep 5
+done
+
 files=( *.txt )
 
 if [ ${#files[@]} -eq 0 ]; then
