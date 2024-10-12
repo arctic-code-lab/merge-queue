@@ -2,6 +2,8 @@
 
 shopt -s nullglob
 
+echo "MQ event on branch: $(git branch --show-current)"
+
 files=( *.txt )
 
 if [ ${#files[@]} -eq 0 ]; then
