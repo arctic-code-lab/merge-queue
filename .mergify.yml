@@ -1,0 +1,8 @@
+queue_rules:
+  - name: default-queue
+    batch_max_wait_time: 1 h
+    batch_size: 3
+    merge_method: squash
+    merge_conditions:
+      - and:
+          - check-success = merge-queue-ci
