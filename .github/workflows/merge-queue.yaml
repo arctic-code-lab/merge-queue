@@ -4,6 +4,9 @@ name: Merge Queue CI
 
 # Controls when the workflow will run
 on:
+  pull_request:
+    branches: [ "main" ]
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -12,7 +15,7 @@ jobs:
   # This workflow contains a single job called "build"
   merge-queue-ci:
     # Skip this job if the event is not a merge_group event
-    if: ${{ github.event_name == 'merge_group' }}
+    if: startsWith(github.head_ref, 'mergify/merge-queue/')
 
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
