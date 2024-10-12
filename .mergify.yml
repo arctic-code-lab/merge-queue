@@ -5,4 +5,4 @@ queue_rules:
     merge_method: squash
     merge_conditions:
       - and:
-          - check-success = pull-request
+          - check-success = merge-queue-ci
