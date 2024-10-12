@@ -3,3 +3,6 @@ queue_rules:
     batch_max_wait_time: 1 h
     batch_size: 3
     merge_method: squash
+    merge_conditions:
+      - and:
+          - check-success = pull-request
